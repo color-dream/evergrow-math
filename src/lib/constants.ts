@@ -53,6 +53,9 @@ export const PROBLEM_TRANSITION_DELAY_MS = 400;
 export const ROUTES = {
   HOME: "/",
   CENTER: "/center",
+  KNOWLEDGE: "/center/knowledge",
+  PRACTICE: "/center/practice",
+  EXAM: "/center/exam",
   MENTAL_ARITHMETIC: "/center/mental",
   COLUMN_MATH: "/center/column",
   SETTINGS: "/settings",

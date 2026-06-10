@@ -9,7 +9,7 @@ import { LearningCenterHub } from "@/components/pages/LearningCenterHub";
 import { PagePlaceholder } from "@/components/shared/PagePlaceholder";
 import { WelcomeGuard } from "@/components/shared/WelcomeGuard";
 import { ROUTES } from "@/lib/constants";
-import { Settings } from "lucide-react";
+import { Settings, BookOpen, Pencil, FileText } from "lucide-react";
 
 export function App() {
   const basename = import.meta.env.VITE_BASE || "/";
@@ -30,6 +30,39 @@ export function App() {
               <Route element={<WelcomeGuard />}>
                 <Route path={ROUTES.CENTER} element={<CenterLayout />}>
                   <Route index element={<LearningCenterHub />} />
+                  {/* 知识 */}
+                  <Route
+                    path={ROUTES.KNOWLEDGE}
+                    element={
+                      <PagePlaceholder
+                        title="知识"
+                        description="数学概念、公式、定理讲解"
+                        icon={<BookOpen className="h-7 w-7" />}
+                      />
+                    }
+                  />
+                  {/* 刷题 */}
+                  <Route
+                    path={ROUTES.PRACTICE}
+                    element={
+                      <PagePlaceholder
+                        title="刷题"
+                        description="海量题库，针对性练习"
+                        icon={<Pencil className="h-7 w-7" />}
+                      />
+                    }
+                  />
+                  {/* 试卷 */}
+                  <Route
+                    path={ROUTES.EXAM}
+                    element={
+                      <PagePlaceholder
+                        title="试卷"
+                        description="模拟测试，检验学习成果"
+                        icon={<FileText className="h-7 w-7" />}
+                      />
+                    }
+                  />
                   {/* 数学学习模块（占位）— 待后续开发 */}
                   <Route
                     path={ROUTES.MENTAL_ARITHMETIC}
